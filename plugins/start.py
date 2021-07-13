@@ -94,7 +94,7 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Eitss Join dulu dong GC kita biar crotnya maksimal \n\nBuruan Join Grup Chatnya Dulu!</b>"
+    text = "<b> Aduh kamu belum subscribe channel nya ya? ayo subscribe dulu biar videonya bisa muncul :). Kalo udh tekan link Coba Lagi dibawah yaa lalu tekan start </b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
