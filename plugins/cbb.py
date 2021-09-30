@@ -10,12 +10,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b> Managed By : <a href='tg://user?id={OWNER_ID}'>Don't Touch Me!</a>",
+            text = f"<b> MANAGED BY : <a href='tg://user?id={OWNER_ID}'>APA NJING?</a>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                        InlineKeyboardButton("🔒 Tutup", callback_data = "close")
                     ]
                 ]
             )
