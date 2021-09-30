@@ -73,8 +73,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("😊 Managed", callback_data = "about"),
+                    InlineKeyboardButton("🔒 Tutup", callback_data = "close")
                 ]
             ]
         )
@@ -94,11 +94,11 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b> Aduh kamu belum subscribe channel nya ya? ayo subscribe dulu biar videonya bisa muncul :). Kalo udh tekan link Coba Lagi dibawah yaa lalu tekan start </b>"
+    text = "<b> JOIN CHANNELNYA DULU NJING SUPAYA VIDEONYA MUNCUL! </b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>and <a href='https://t.me/{client.username}?start={argument}'>Coba Lagi</a></b>"
+        text = text + f" <b>and <a href='https://t.me/{client.username}?start={argument}'>COBA LAGI</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel", url = client.invitelink)]])
